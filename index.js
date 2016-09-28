@@ -1,7 +1,7 @@
-var express = required('express');
+var express = require('express');
 var server = express();
 
-server.use(express.static(_dirname + "/public"));
+server.use(express.static(__dirname + "/public"));
 
 server.get('/', function(request, response) {
   response.sendFile('public/index.html', {root: __dirname});
